@@ -1,0 +1,28 @@
+### GLOBAL VARIABLE ###
+Local variable is variable declared inside of function.
+Global variable is variable declared outside of function.
+
+##Local variable 
+#!/bin/bash
+function1(){
+    a=10
+    echo $a
+}
+echo $a                                 #tidak akan menampilkan output, karena variablenya local didalam function
+
+function 1                              #menampilam output, karena menjalankan echo di dalam function
+
+
+
+##Local variable
+#!/bin/bash
+var1 = "this is global variable"
+
+function1(){
+    a=10
+    echo $a
+    echo $var1
+}
+echo $var1                    
+
+function 1                  

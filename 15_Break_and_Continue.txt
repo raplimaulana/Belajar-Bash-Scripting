@@ -1,0 +1,44 @@
+### BREAK AND CONTINUE ###
+Break = it breaks the execution of a loop.
+continue = it skip the execution on some certain condition.
+
+##create break 
+#!/bin/bash
+for((i=0;i<=10;i++)){
+    if | $i -eq 5 |
+    then
+    break
+    else
+    echo $i
+    fi
+}
+
+
+
+##create continue 1
+#!/bin/bash
+for((i=0;i<=10;i++)){
+    if | $i -eq 5 |
+    then
+    continue
+    else
+    echo $i
+    fi
+}
+
+
+
+##create break 2
+#!/bin/bash
+for((i=0;i<=10;i++)){
+    echo "Enter your age : "
+    read age
+
+    if | $age -lt 17 |
+    then
+    echo "You are not allowed"
+    break
+    else
+    echo "You are allowed"
+    fi
+}

@@ -1,0 +1,53 @@
+### OPERATOR ###
+Ketika mengguanakan operator aritmatika, kita perlu menggunakan tanda (( )).
+
+##Use operator in shell script
+#Create file script
+nano operator.sh
+
+#!/bin/bash
+
+#Arithmatic operator
+read -p "Enter n1 " n1
+read -p "Enter n2 " n2
+
+echo "Addition = " $((n1+n2))
+echo "Substraction = " $((n1-n2))
+echo "Multiplication = " $((n1*n2))
+echo "Division = " $((n1/n2))
+echo "Modulus = " $((n1%n2))
+echo "Increment = " $((++n1))
+echo "Decreament = " $((--n2))
+
+#Relational operator (gt, ge, lt, le, eq and ne)
+if [ $n1 -gt $n2 ]
+then
+echo "n1 > n2"
+fi
+
+if [ $n1 -eq $n2 -a $n1 -gt 1 ]
+then
+echo "n1 = n2"
+fi
+
+if [ $n1 -eq $n2 -o $n1 -gt 1 ]
+then
+echo "n1 = n2"
+fi
+
+
+#run script
+/bin/bash operator.sh
+
+#output
+Enter n1 " 5
+Enter n2 " 7
+
+Addition = 12
+Substraction = -2
+Multiplication = 35
+Division = 0
+Modulus = 5
+Increment = 5
+Decreament = 6
+

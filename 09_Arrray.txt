@@ -1,0 +1,20 @@
+### ARRAY ###
+Array is a data structure which is used for storing multiple values in a single variable.
+
+##Array in shell script
+#Create file script
+nano array.sh
+
+#!/bin/bash
+
+namelist=(Rapli Maulana Aji);
+
+echo "First name : " ${namelist[0]}
+echo "Full name : " ${namelist[*]}
+
+#run script
+/bin/bash array.sh
+
+#output
+Rapli
+Rapli Maulana Aji

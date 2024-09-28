@@ -1,0 +1,31 @@
+### PASSING ARGUMENTS ###
+
+##Passing arguments in shell script
+#Create file script
+nano pass_argument.sh
+
+#!/bin/bash
+
+echo $0
+echo $1
+echo $2
+echo $3
+
+echo $@
+echo $#
+
+name=$1
+
+echo "My name is: $name"
+
+#run script
+/bin/bash pass_argument.sh rapli maulana 341212 14111
+
+#output
+pass_argument.sh
+rapli 
+maulana 
+341212
+pass_argument.sh rapli maulana 341212 14111
+4
+My name is rapli

@@ -1,0 +1,21 @@
+### USER INPUT VARIABLE ###
+
+##Use input variable in shell script
+#Create file script
+nano user_input.sh
+
+#!/bin/bash
+
+echo "Read input from user"
+
+echo "Enter your name: " 
+read name
+
+read -p "Enter your username: " username
+read -sp "Enter your password: " password
+
+echo "Your name is: " $name
+echo "Your username is: " username "Password" $password
+
+#run script
+/bin/bash user_input.sh

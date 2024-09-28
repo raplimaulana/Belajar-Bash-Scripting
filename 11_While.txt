@@ -1,0 +1,44 @@
+### WHILE ###
+
+while [condition]
+do
+//code
+done
+
+##While loop in shell script
+#Create file script
+nano while.sh
+
+#!/bin/bash
+
+i=0
+while [ $i <= 4];
+do
+echo "rapli"
+let i++;
+done
+
+array=(1 2 3 4 5)
+
+i=0
+while [ $i -le 4];
+do
+echo ${array[i]}
+let i++;
+done
+
+#run script
+/bin/bash while.sh 
+
+#output
+rapli 
+rapli 
+rapli 
+rapli 
+rapli 
+
+1
+2
+3
+4
+5

@@ -1,0 +1,62 @@
+### FUNCTION ###
+Function is a block of code which can be used again and again.
+
+functionname(){
+    //code   
+}
+
+
+
+##Create function
+#!/bin/bash
+
+greetings(){
+    echo "hello world"   
+}
+sum(){
+    a=2
+    b=3
+    c=$(($a+$b))
+    echo "The sum pf $a and $b is : " $c
+}
+sum2(){
+    a=$1
+    b=$2
+    c=$(($a+$b))
+    echo "The sum pf $a and $b is : " $c
+}
+greetings(){
+    echo "hello world"   
+}
+greetings2(){
+    echo "hello "   
+}
+sum3(){
+    a=$1
+    b=$2
+    c=$(($a+$b))
+    return $c
+}
+sum4(){
+    a=$1
+    b=$2
+    c=$(($a+$b))
+    return $c
+}
+
+greetings
+sum
+sum2 2 3
+greeting2 "world"
+
+#return value
+sum3 2 3
+sum4 1 2
+ret=$?
+echo "Return value is : " $ret          $outputnya akan mengambil return value terakhir
+
+*In a Bash script on Linux, $? is a special variable that stores the exit status of the last command that was executed.
+
+ Exit Status: A command in Linux returns an exit status, which is a number that indicates whether the command was successful or if it encountered an error.
+ An exit status of 0 typically means the command was successful.
+ Any non-zero value indicates an error or some issue.

@@ -1,0 +1,45 @@
+### NESTED FUNCTION ###
+Nested function bassicly is a calling function inside a function.
+
+##crete nested function 1 
+#!/bin/bash
+
+demo(){
+    echo "This is a demo function" 
+    demo2
+}
+demo2(){
+    echo "This is a demo2 function"
+}
+
+demo 
+
+
+
+##crete nested function 2 
+#!/bin/bash
+
+demo(){
+    echo "This is a demo function" 
+    demo2(){
+        echo "This is a demo2 function"
+    }
+    demo2
+}
+
+demo 
+
+
+
+##crete nested function 3
+#!/bin/bash
+
+sum(){
+    echo "The sum of $1 and $2 is : " $(($1+$2))
+    sub(){
+        echo "The difference of $1 and $2 is : " $(($1-$2))
+    }
+    sub 2 1
+}
+
+demo 1 2

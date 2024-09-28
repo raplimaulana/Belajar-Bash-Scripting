@@ -1,0 +1,63 @@
+### FOR ###
+
+##For loop in shell script
+#Create file script
+nano for.sh
+
+#!/bin/bash
+
+for i in 1 2 3 4 5
+do 
+  echo "Iteration: " $i
+done
+
+for i in rapli maulana
+do 
+  echo "Iteration: " $i
+done
+
+for i in rapli maulana
+do 
+  if [ $i == rapli]
+  then
+  echo "$i is good boy"
+  fi
+done
+
+for i in {1..5}
+do
+  echo "Iteration: " $i
+done
+
+
+fruits=("apple" "banana" "cherry")
+
+for fruit in "${fruits[@]}"
+do
+  echo "I like $fruit"
+done
+
+#run script
+/bin/bash for.sh 
+
+#output
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+Iteration: 5
+
+Iteration: 1
+Iteration: 2
+
+rapli is good boy
+
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+Iteration: 5
+
+I like apple
+I like banana
+I like cherry

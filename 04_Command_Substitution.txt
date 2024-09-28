@@ -1,0 +1,23 @@
+### COMMAND SUBSTITUTION ###
+Kita dapat menggunakan perintah linux di dalam file shell script.
+
+##Use command substitution in shell script
+#Create file script
+nano substitution.sh
+
+#!/bin/bash
+
+echo "Command substitution tutorial"
+
+read -p "Which server do you want to ssh?" server_addr
+
+current_directory='pwd'
+list_current_file=$(ls)
+
+ssh root@$server_addr
+
+echo "Your present working directory is " $current_directory 
+echo "List all file and folder: " $list_current_file
+
+#run script
+/bin/bash substitution.sh

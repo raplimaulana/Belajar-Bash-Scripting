@@ -1,0 +1,24 @@
+### SCHEDULLING JOBS ###
+Kita dapat menggunakan scheduller untuk menjalankan script yang telah dibuat secara otomatis.
+Ada dua cara schedulling yakni mengunakan at dan crontab.
+
+1. at
+   
+   sudo apt install at
+   at 15:30 -f ./helloworld.sh
+   at 15:30 081624 -f ./helloworld.sh
+
+   #Check schedulling at actived
+   atq
+
+   3       Thu Mar 31 15:30:00 2024 a rapli
+
+   #Remove schedulling at
+   atrm 3
+
+2. crontab
+ 
+   crontab -e 
+
+   30 1 * * 5 /bin/bash helloworld.sh
+

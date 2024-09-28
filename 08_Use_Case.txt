@@ -1,0 +1,31 @@
+### USE CASE ###
+
+##Using use case in shell script
+#Create file script
+nano use_case.sh
+
+#!/bin/bash
+
+read -p "Enter grade: " grade
+
+case $grade in
+  A)
+    echo "Your mark is between 90-100"
+    ;;
+  B)
+    echo "Your mark is between 81-90"
+    ;;
+  C)
+    echo "Your mark is between 71-80"
+    ;;
+  *)
+    echo "Your mark is below 70"
+essac
+
+
+#run script
+/bin/bash use_case.sh
+
+#output
+Enter grade : C
+Your mark is between 71-80

@@ -1,0 +1,32 @@
+### VARIABLE ###
+
+##Use variable in shell script
+#Create file script
+nano variable.sh
+
+#!/bin/bash
+
+echo "Variables: container which will hold some values."
+
+name="rapli"                            #jangan menggunakan spasi setelah '='
+age=27
+pointer=9.98
+NOW=$(date '+%f_%H:+%M:%S') 
+
+echo $name $age
+echo "My pointer is: " $pointer
+echo "First event variable: " $NOW
+
+#run script
+/bin/bash variable.sh
+
+
+##Use env on local os to script
+env
+
+#Create file script
+nano variable.sh
+
+#!/bin/bash
+echo "Second event variable: " $USER
+echo "Third event variable: " $SHELL

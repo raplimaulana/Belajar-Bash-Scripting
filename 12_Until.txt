@@ -1,0 +1,42 @@
+### UNTIL ###
+
+until [condition]
+do
+//code
+done
+
+##Until loop in shell script
+#Create file script
+nano until.sh
+
+#!/bin/bash
+
+i=0
+until [ $i -gt 3];
+do
+echo "rapli"
+let i++;
+done
+
+i=0
+until [ $i -ge 5];
+do
+echo $((5*$i));
+let i++;
+done
+
+#run script
+/bin/bash until 
+
+#output
+rapli 
+rapli 
+rapli 
+rapli 
+
+0
+5
+10
+15
+20
+25

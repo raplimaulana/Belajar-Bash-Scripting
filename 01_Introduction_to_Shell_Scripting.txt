@@ -1,0 +1,26 @@
+### INTRODUCTION TO SHELL SCRIPTING ###
+
+##Check valid login shell
+cat /etc/shells
+
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/dash
+/usr/bin/dash
+
+##Check default shell used
+echo $SHELL
+
+##Run script file
+chmod +x helloworld.sh
+./helloworld.sh
+
+#Change env on local system
+echo $PATH 
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+
+export PATH=/usr/local/bin:$PATH
+/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
